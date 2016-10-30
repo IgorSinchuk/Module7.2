@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+    <bean id="main" class="com.example.Main"  init-method="init">
+        <property name="reInit" value="true"/>
+    </bean>
+
+    <bean id="employeeController" class="com.example.controllers.EmployeeController"/>
+    <bean id="dishController" class="com.example.controllers.DishController"/>
+    <bean id="orderController" class="com.example.controllers.OrderController"/>
+
+    <bean id="employeeDao" class="com.example.dao.hibernate.HEmployeeDao"/>
+    <bean id="dishDao" class="com.example.dao.hibernate.HDishDao"/>
+    <bean id="orderDao" class="com.example.dao.hibernate.HOrderDao"/>
+
+
+
+</beans>
